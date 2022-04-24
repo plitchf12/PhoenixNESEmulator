@@ -16,7 +16,7 @@
 int main()
 {   
     // hard coding Test Rom Location for now
-    std::string testRomFileDirectory = "C:\\Users\\Phillip\\source\\repos\\NesEmulator\\NESTestRoms";
+    std::string testRomFileDirectory = "D:\\Users\\Phillip\\Documents\\NESTestRoms";
     std::string branchTestFilename = "\\branch_timing_tests\\1.Branch_Basics.nes";
     std::string filename = testRomFileDirectory.append(branchTestFilename);
 
