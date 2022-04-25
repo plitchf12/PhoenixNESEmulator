@@ -11,6 +11,8 @@
 #include <stdio.h>
 #include "NesSystem.h"
 #include "HexDisplayHelper.h"
+#include "RomReader.h"
+#include "Rom.h"
 
 //int main(int argc, char* argv[])
 int main()
@@ -18,21 +20,16 @@ int main()
     // hard coding Test Rom Location for now
     std::string testRomFileDirectory = "D:\\Users\\Phillip\\Documents\\NESTestRoms";
     std::string branchTestFilename = "\\branch_timing_tests\\1.Branch_Basics.nes";
-    std::string filename = testRomFileDirectory.append(branchTestFilename);
+    std::string fileName = testRomFileDirectory.append(branchTestFilename);
 
-    std::ifstream inputFile(filename, std::ios::binary);  
-    
-    if (inputFile.good())
+    RomReader* reader = new RomReader();
+    Rom* rom = nullptr;
+    if (reader->openFile(fileName))
     {
-        std::vector<uint8_t> v_buf(std::istreambuf_iterator<char>(inputFile), {});
-        std::vector<uint8_t> fileHeader = {v_buf.begin(), v_buf.begin() + 128};       
-        
-        HexDisplayHelper::printHexTable(fileHeader, 4, 4);
+        rom = reader->readFile();
+    }    
 
-    }
-
-    
-
+    rom;
     //std::cout << "test\n" << argc << "\n";
     //std::cout << argv[1] << " " << argv[2] << "\n";
 
