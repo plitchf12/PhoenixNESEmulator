@@ -150,6 +150,7 @@
   <ItemGroup>
     <ClInclude Include="CPU.h" />
     <ClInclude Include="HexDisplayHelper.h" />
+    <ClInclude Include="Instruction.h" />
     <ClInclude Include="NesSystem.h" />
     <ClInclude Include="PPU.h" />
     <ClInclude Include="Rom.h" />

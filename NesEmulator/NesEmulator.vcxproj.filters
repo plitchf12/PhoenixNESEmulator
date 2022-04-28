@@ -56,5 +56,8 @@
     <ClInclude Include="Rom.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Instruction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
