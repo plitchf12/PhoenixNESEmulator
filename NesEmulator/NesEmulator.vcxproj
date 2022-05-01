@@ -146,6 +146,7 @@
     <ClCompile Include="PPU.cpp" />
     <ClCompile Include="Rom.cpp" />
     <ClCompile Include="RomReader.cpp" />
+    <ClCompile Include="AddrModeEnum.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CPU.h" />

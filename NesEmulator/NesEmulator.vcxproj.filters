@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Enum">
+      <UniqueIdentifier>{a2a635d9-49e8-43e0-99d4-37e90d39ea1b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -35,6 +38,9 @@
     </ClCompile>
     <ClCompile Include="Rom.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AddrModeEnum.cpp">
+      <Filter>Source Files\Enum</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
