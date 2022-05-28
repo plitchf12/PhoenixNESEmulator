@@ -53,3 +53,14 @@ void CPU::setNegativeFlag()
 	this->statusFlags |= 0x80;
 }
 #pragma endregion
+
+int CPU::add()
+{
+	uint8_t operand1 = 0;
+	if (currentInstr.AddrMode == AddrModeEnum::Imm)
+	{
+		
+	}
+
+	return 0;
+}
