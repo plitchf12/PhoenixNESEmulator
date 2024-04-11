@@ -13,25 +13,37 @@ class CPU
 	uint8_t regX;
 	uint8_t regY;
 
-	// Status register
+	/*
+	* Status register
+	* The bits from least to most significant are Carry,
+	* Zero, InterruptDisable, Decimal, B flag?, None,
+	* Overflow, and Negative
+	*/ 
 	uint8_t statusFlags;
 
 	Instruction currentInstr;
 
+	
+	
+
 #pragma region flagSettersGetters
+	uint8_t getStatusFlags();
 	uint8_t getCarryFlag();
 	uint8_t getZeroFlag();
 	uint8_t getIntDisableFlag();
 	uint8_t getDecimalFlag();
 	uint8_t getOverflowFlag();
 	uint8_t getNegativeFlag();
+	uint8_t getBFlag();
 
+	void setStatusFlags(uint8_t statusFlags);
 	void setCarryFlag();
 	void setZeroFlag();
 	void setIntDisableFlag();
 	void setDecimalFlag();
 	void setOverflowFlag();
 	void setNegativeFlag();
+	void setBFlag();
 #pragma endregion
 
 

@@ -1,0 +1,7 @@
+NES Emulator Resources:
+
+Example NES Dev blog: https://yizhang82.dev/nes-emu-overview
+Youtube series: https://www.youtube.com/playlist?list=PLrOv9FMX8xJHqMvSGB_9G9nZZ_4IgteYf
+NES Documentation: https://www.nesdev.com/NESDoc.pdf
+NES Dev Wiki: https://www.nesdev.org/wiki/Nesdev_Wiki
+CPU 6502 info: https://www.nesdev.org/wiki/6502_instructions

@@ -14,14 +14,15 @@
 #include "RomReader.h"
 #include "Rom.h"
 
-//int main(int argc, char* argv[])
-int main()
+int main(int argc, char* argv[])
+//int main()
 {   
     // hard coding Test Rom Location for now
     std::string testRomFileDirectory = "D:\\Users\\Phillip\\Documents\\NESTestRoms";
     std::string branchTestFilename = "\\branch_timing_tests\\1.Branch_Basics.nes";
     std::string fileName = testRomFileDirectory.append(branchTestFilename);
 
+    // Open ROM file 
     RomReader* reader = new RomReader();
     Rom* rom = nullptr;
     if (reader->openFile(fileName))
@@ -29,12 +30,12 @@ int main()
         rom = reader->readFile();
     }    
 
-    rom;
+    rom->printRom();
     //std::cout << "test\n" << argc << "\n";
     //std::cout << argv[1] << " " << argv[2] << "\n";
 
-    // Open ROM file 
-
+    
+    
 
     auto nesSystem = new NesSystem::NesSystem();
     nesSystem->masterClock;
