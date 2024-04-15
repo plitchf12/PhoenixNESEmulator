@@ -18,8 +18,8 @@ int main(int argc, char* argv[])
 //int main()
 {   
     // hard coding Test Rom Location for now
-    std::string testRomFileDirectory = "D:\\Users\\Phillip\\Documents\\NESTestRoms";
-    std::string branchTestFilename = "\\branch_timing_tests\\1.Branch_Basics.nes";
+    std::string testRomFileDirectory = "C:\\Users\\plitchfield\source\\repos\\plitchf12\\PhoenixNesEmulator\\NesEmulator\\TestROMs\\branch_timing_tests";
+    std::string branchTestFilename = "1.Branch_Basics.nes";
     std::string fileName = testRomFileDirectory.append(branchTestFilename);
 
     // Open ROM file 

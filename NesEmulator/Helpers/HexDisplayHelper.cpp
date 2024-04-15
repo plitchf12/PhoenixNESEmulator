@@ -2,8 +2,7 @@
 #include <sstream>
 #include "HexDisplayHelper.h"
 
-
-std::string HexDisplayHelper::buildStringFromVector(std::vector<uint8_t> vec, std::string delim = "")
+std::string HexDisplayHelper::buildHexStringFromVector(std::vector<uint8_t> vec, const std::string delim = "")
 {
 	std::stringstream ss;
 	std::string result = "";
@@ -22,43 +21,29 @@ std::string HexDisplayHelper::buildStringFromVector(std::vector<uint8_t> vec, st
 	return result;
 }
 
-std::string HexDisplayHelper::buildStringTable(std::vector<uint8_t> vec, const char* delim = "")
+std::string HexDisplayHelper::buildHexStringTable(std::vector<uint8_t> vec, int cols, const std::string delim = "")
 {
+	std::string result = "";
 
-}
-
-void HexDisplayHelper::printHex(uint8_t value, const char* delim)
-{
-	printf("%02X", value);
-	printf(delim);
-}
-
-void HexDisplayHelper::printHexVector(std::vector<uint8_t> vec, const char* delim)
-{
-	for (auto itr = vec.begin(); itr < vec.end(); itr++)
+	if (vec.size() < 1)
 	{
-		HexDisplayHelper::printHex(*itr);
-		printf("%s", delim);
+		return result;
 	}
-}
 
-void HexDisplayHelper::printHexTable(std::vector<uint8_t> vec, int rows, int cols)
-{
-	int r = 0;
+	std::stringstream ss;
+	ss << std::hex;
 	int c = 0;
 	int i = 0;
-	size_t length = vec.size();
 	
-	while (i < rows * cols && i < length)
+	while (i < vec.size())
 	{
-		printHex(vec[i]);
+		ss << vec[i];
 		c++;
 
 		if (c >= cols)
 		{
 			std::cout << std::endl;
 			c = 0;
-			r++;
 		}
 		else 
 		{
@@ -69,11 +54,44 @@ void HexDisplayHelper::printHexTable(std::vector<uint8_t> vec, int rows, int col
 	}
 }
 
-void HexDisplayHelper::couthex(std::ostream& out, uint8_t value, const char* delim)
+std::string buildHexStringTable(std::vector<uint8_t> vec, int cols, int rows, const std::string delim = "")
+{	
+	std::string result = "";
+
+	if (vec.size() < 1)
+	{
+		return result;
+	}
+
+	std::stringstream ss;
+	ss << std::hex;
+	int c = 0;
+	int i = 0;
+	
+	while (i < rows * cols && i < vec.size())
+	{
+		ss << vec[i];
+		c++;
+
+		if (c >= cols)
+		{
+			std::cout << std::endl;
+			c = 0;
+		}
+		else 
+		{
+			std::cout << " ";
+		}
+		
+		i++;
+	}
+}
+
+void HexDisplayHelper::couthex(std::ostream& out, uint8_t value, const std::string delim = "")
 {
 	std::ios_base::fmtflags f(out.flags());
 
 	out << std::hex << unsigned(value) << delim;
 
 	out.flags(f);
-}
+}		
