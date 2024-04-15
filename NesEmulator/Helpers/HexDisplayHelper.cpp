@@ -1,6 +1,31 @@
 #include <iomanip>
+#include <sstream>
 #include "HexDisplayHelper.h"
 
+
+std::string HexDisplayHelper::buildStringFromVector(std::vector<uint8_t> vec, std::string delim = "")
+{
+	std::stringstream ss;
+	std::string result = "";
+
+	if (vec.size() > 0)
+	{
+		for (const auto value : vec)
+		{
+			ss << value << delim;
+		}
+
+		result = ss.str();
+		result = result.substr(0, result.length() - delim.length());
+	}
+
+	return result;
+}
+
+std::string HexDisplayHelper::buildStringTable(std::vector<uint8_t> vec, const char* delim = "")
+{
+
+}
 
 void HexDisplayHelper::printHex(uint8_t value, const char* delim)
 {

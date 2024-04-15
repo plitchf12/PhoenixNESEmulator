@@ -16,6 +16,12 @@
     <Filter Include="Source Files\Enum">
       <UniqueIdentifier>{a2a635d9-49e8-43e0-99d4-37e90d39ea1b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Helpers">
+      <UniqueIdentifier>{440ec8f0-6894-4517-8f25-713d16ae2d1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Helpers">
+      <UniqueIdentifier>{e6e5e730-0d29-4601-ba6c-1508157d4a2e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -42,6 +48,15 @@
     <ClCompile Include="AddrModeEnum.cpp">
       <Filter>Source Files\Enum</Filter>
     </ClCompile>
+    <ClCompile Include="Helpers\StringHelper.h">
+      <Filter>Header Files\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpers\StringHelper.cpp">
+      <Filter>Source Files\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpers\HexDisplayHelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NesSystem.h">
@@ -63,6 +78,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Instruction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers\HexDisplayHelper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
