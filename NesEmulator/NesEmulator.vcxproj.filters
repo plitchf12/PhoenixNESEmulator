@@ -36,9 +36,6 @@
     <ClCompile Include="PPU.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HexDisplayHelper.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="RomReader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -66,9 +63,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PPU.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HexDisplayHelper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="RomReader.h">

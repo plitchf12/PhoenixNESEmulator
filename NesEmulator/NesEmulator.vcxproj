@@ -141,7 +141,6 @@
   <ItemGroup>
     <ClCompile Include="CPU.cpp" />
     <ClCompile Include="Helpers\HexDisplayHelper.cpp" />
-    <ClCompile Include="HexDisplayHelper.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NesSystem.cpp" />
     <ClCompile Include="PPU.cpp" />
@@ -154,7 +153,6 @@
   <ItemGroup>
     <ClInclude Include="CPU.h" />
     <ClInclude Include="Helpers\HexDisplayHelper.h" />
-    <ClInclude Include="HexDisplayHelper.h" />
     <ClInclude Include="Instruction.h" />
     <ClInclude Include="NesSystem.h" />
     <ClInclude Include="PPU.h" />

@@ -1,8 +1,7 @@
 #include "Rom.h"
 #include <vector>
 #include <iostream>
-
-using namespace std;
+#include "Helpers/HexDisplayHelper.h"
 
 Rom::Rom(vector<uint8_t> fileHeader, vector<uint8_t> data)
 {
@@ -12,14 +11,6 @@ Rom::Rom(vector<uint8_t> fileHeader, vector<uint8_t> data)
 
 void Rom::printRom()
 {
-	// set flags
-	std::cout.flags(std::ios::hex);
-
-	// lines for 16 bytes with spaces
-	std::cout.width(37);
-
-	for (auto iter : data)
-	{
-		std::cout << iter;
-	}
+	auto romString = HexDisplayHelper::buildHexStringTable(data, 4, "");
+	cout << std::hex << romString;
 }
