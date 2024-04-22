@@ -11,6 +11,6 @@ Rom::Rom(vector<uint8_t> fileHeader, vector<uint8_t> data)
 
 void Rom::printRom()
 {
-	auto romString = HexDisplayHelper::buildHexStringTable(data, 4, "");
-	cout << std::hex << romString;
+	auto romString = HexDisplayHelper<uint8_t>::buildHexTable(data, 4, 4, "");
+	cout << romString;
 }

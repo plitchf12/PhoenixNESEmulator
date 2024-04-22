@@ -51,9 +51,6 @@
     <ClCompile Include="Helpers\StringHelper.cpp">
       <Filter>Source Files\Helpers</Filter>
     </ClCompile>
-    <ClCompile Include="Helpers\HexDisplayHelper.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="NesSystem.h">

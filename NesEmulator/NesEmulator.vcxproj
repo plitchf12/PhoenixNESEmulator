@@ -140,7 +140,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CPU.cpp" />
-    <ClCompile Include="Helpers\HexDisplayHelper.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="NesSystem.cpp" />
     <ClCompile Include="PPU.cpp" />
