@@ -1,10 +1,9 @@
 #include "NesSystem.h"
 
-class System 
-{
-	int MasterCycle;
+#include "Rom.h"
 
-	System() {
-		MasterCycle = 0;
-	}
-};
+NesSystem::NesSystem::NesSystem(Rom* rom)
+{
+	masterClock = 0;
+	this->rom = rom;
+}

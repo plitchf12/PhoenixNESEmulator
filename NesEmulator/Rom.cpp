@@ -1,7 +1,9 @@
 #include "Rom.h"
+
 #include <vector>
 #include <iostream>
 #include "Helpers/HexDisplayHelper.h"
+
 
 Rom::Rom(vector<uint8_t> fileHeader, vector<uint8_t> data)
 {

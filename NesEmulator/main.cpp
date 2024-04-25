@@ -28,17 +28,12 @@ int main(int argc, char* argv[])
     if (reader->openFile(fileName))
     {
         rom = reader->readFile();
-    }    
-
-    rom->printRom();
-    //std::cout << "test\n" << argc << "\n";
-    //std::cout << argv[1] << " " << argv[2] << "\n";
-
+    }       
     
-    
+    // Initialize system and components
+    // Start program
 
-    auto nesSystem = new NesSystem::NesSystem();
-    nesSystem->masterClock;
+    auto nesSystem = new NesSystem::NesSystem(rom);    
 }
 
 
